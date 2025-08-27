@@ -121,7 +121,7 @@ Lastly, after you've completed your agent configuration and tested its performan
 
 In the Knowledge section, you have to choose how to provide knowledge information to the agent. watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI, connecting to a content repository like Milvus or Elasticsearch, or connecting to an existing Custom service instance. The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Choose knowledge** button (annotated with red arrow) to upload pdf files capturing earnings reports for AMZN, META, NVDA, and NFLX.
 
-![wxo agent config knowledge](images/wxo-agent-config-knowledge.png) 
+![wxo choose knowledge](images/wxo-choose-knowledge.png) 
 
 
 Drag and drop the following pdf files to upload to the knowledge for the agent :
