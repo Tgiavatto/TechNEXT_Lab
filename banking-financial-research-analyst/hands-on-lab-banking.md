@@ -30,7 +30,7 @@ By automating these tasks, the company aims to accelerate research process to id
 
 <img width="900" alt="image" src="images/banking-fra-architecture.png">
 
-## Pre-requisites
+## Pre-requisites [NEED TO UPDATE AS ENVIRONMENTS WILL BE SETUP PRIOR TO BOOTCAMP]
 To run the steps in this hands-on lab portion of the bootcamp, you need access to **watsonx Orchestrate** and **watsonx.ai** which are provided for you as part of the preparation for this bootcamp.
 
 - Please go the through the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/staging/environment-setup) guide for steps on API key creation, and project setup.
@@ -44,10 +44,11 @@ As detailed in the [Solution Architecture](images/banking-fra-architecture.png),
 ### Accessing watsonx Orchestrate
 To access watsonx Orchestrate, follow these steps:
 
-1- If not already logged into your IBM Cloud account, navigate your preferred browser to https://cloud.ibm.com and log in with your credentials (which you used for your TechZone reservation).
+1- If not already logged into your IBM Cloud account, navigate your preferred browser to https://cloud.ibm.com and log in with your credentials. 
+*Note: These are the same credentials you created upon signing up for an account on IBM Cloud.*
 
 2- On your IBM Cloud landing page, click the top left navigation menu (hamburger menu) and select **Resource list** (annotated with red rectangle).
-*Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available as explained in the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/staging/environment-setup) guide.*
+*Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available. The account that you should see here will be one of the following options:*
 ![IBM Cloud Resource List](images/ibm_cloud_resources.png) 
 
 3- On the Resource List page, expand the **AI / Machine Learning** section (annotated with red arrow), and click the **Watsonx Orchestrate** service (annotated with red rectangle) service name.
@@ -56,7 +57,7 @@ To access watsonx Orchestrate, follow these steps:
 4- Click **Launch watsonx Orchestrate** (annotated with red arrow) to launch the service.
 ![wxo launch](images/wxo-launch.png) 
 
-5- Once watsonx Orchestrate service is launched, you would be at its landing page as illustrated in the figure below. You will see an intuitive conversational interface with a chat field (annotated with red rectangle) where you can type any text to start interacting with watsonx Orchestrate. When you start with a new service instance, there will be no custom agents defined and thus, the section under **Agents** will state *No agents available*. You can either click **Create or Deploy** an agent under the Agents section or you can click **Create new agent** (annotated with red arrow) to start developing new agents. You can also select the **Manage agents** link to navigate to the agent management page.
+5- Once watsonx Orchestrate service is launched, you will be at its landing page as illustrated in the figure below. You will see an intuitive conversational interface with a chat field (annotated with red rectangle) where you can type any text to start interacting with watsonx Orchestrate. When you start with a new service instance, there will be no custom agents defined and thus, the section under **Agents** will state *No agents available*. You can either click **Create or Deploy** an agent under the Agents section or you can click **Create new agent** (annotated with red arrow) to start developing new agents. You can also select the **Manage agents** link to navigate to the agent management page.
 Try to type a few generic questions and observe the responses from the large language model (LLM) powering the prebuilt agent in watsonx Orchestrate which ensures basic functionality until custom agents are created.
 ![wxo landing page](images/wxo-landing-page.png) 
 
@@ -80,7 +81,7 @@ Description:
 ```
 Agent skilled at financial research using internal knowledge and external search of public information.
 ```
-The natural language description of an agent is important as it is leveraged by the agentic solution to route user messages to the right agent skilled in addressing the request. For more details, please review the [Understanding the description attribute for AI Agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-creating#understanding-the-description-attribute-for-ai-agent) documentation.
+The natural language description of an agent is important as it is leveraged by the agentic solution to route user messages to the right agent skilled in addressing the request. For more details, please review the [Recommendations for agent descriptions](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=agents-recommendations-agent-descriptions) documentation.
 
 watsonx Orchestrate supports creating an agent from scratch or from a template which involves browsing a catalog of existing agents and using attributes of another agent as a template for the new agent. For this lab, you will be creating agents from scratch.
 
@@ -94,7 +95,7 @@ After the AI Agent is created, in this section, you will go through the process 
 
    - Profile: The **Profile** section consists of the description of the agent which you provided as part of creating the agent. You can always go to this section to edit and refine the description of the agent as needed. In this section, you also specify the **Agent style** whether *Default* or *ReAct*. 
    
-   *Note: For more details, Please consult the [Choosing a reasoning style for your agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=agents-choosing-reasoning-style-your-agent) documentation to understand the difference and how it affects the agent's behavior.*
+   *Note: For more details, Please consult the [Choosing a style for your agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=agents-choosing-reasoning-style-your-agent) documentation to understand the difference and how it affects the agent's behavior.*
 
    - Knowledge: The **Knowledge** section is where you can add knowledge to the agent. Adding knowledge to agents plays a crucial role in enhancing their conversational capabilities by providing them with the necessary information to generate accurate and contextually relevant responses for specific use cases. You can directly upload files to the agent, or connect to a Milvus or Elasticsearch instance as a content repository. Through this **Knowledge** interface, you can enable your AI agents to implement the Retrieval Augmented Generation (RAG) pattern which is a very popular AI pattern for grounding responses to a trusted source of data such as enterprise knowledge base.
    
@@ -102,7 +103,7 @@ After the AI Agent is created, in this section, you will go through the process 
 
    - Toolset: While *Knowledge* is how you empower agents with a trusted knowledge base, then **Toolset** is how you enable agents to take action by providing them with *Tools* and *Agents*. Agents can accomplish tasks by using **Tools** or can delegate tasks to other **Agents** which are deeply skilled in such tasks.
 
-   *Note: For more details, please consult the [Adding tools to an agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-tools) and [Adding agents for orchestration](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-orchestration) sections of the documentation.*
+   *Note: For more details, please consult the [Add a tool](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=agents-managing-tools-from-agent#agent-add-tool) and [Adding agents for orchestration](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-orchestration) sections of the documentation.*
    
    - Behavior: The **Behavior** section of the agent configuration is where you provide instructions to the agent to define how it responds to user requests and situations. You can configure rules that dictate when and how the agent should take action. These rules help the agent behave in a predictable and consistent manner, delivering a seamless user experience.
 
@@ -116,14 +117,9 @@ Lastly, after you've completed your agent configuration and tested its performan
 
 ![wxo create agent config](images/wxo-create-agent-config.png) 
 
-10- On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Also, keep the *Agent style* selection as **Default**. Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut (annotated with red oval). In the Knowledge section, add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a number of recent earnings reports for a handful of companies.
+10- On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Also, keep the *Agent style* selection as **Default**. Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut (annotated with red oval). 
 
-Description: 
-```
-This knowledge addresses all details about earning reports for the companies of interest. Research analysts can ask about any details from earning reports.
-```
-
-Next, you have to choose how to provide knowledge information to the agent. watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI or by pointing to a content repository (Mivlus or ElasticSearch). The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Upload files** button (annotated with red arrow) to upload pdf files capturing earnings reports for AMZN, META, NVDA, and NFLX.
+In the Knowledge section, you have to choose how to provide knowledge information to the agent. watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI, connecting to a content repository like Milvus or Elasticsearch, or connecting to an existing Custom service instance. The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Choose knowledge** button (annotated with red arrow) to upload pdf files capturing earnings reports for AMZN, META, NVDA, and NFLX.
 
 ![wxo agent config knowledge](images/wxo-agent-config-knowledge.png) 
 
@@ -136,6 +132,12 @@ Drag and drop the following pdf files to upload to the knowledge for the agent :
 
 ![wxo knowledge upload files](images/wxo-knowledge-upload-files.png) 
 
+Here, you will also be able to add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a number of recent earnings reports for a handful of companies.
+
+Description: 
+```
+This knowledge addresses all details about earning reports for the companies of interest. Research analysts can ask about any details from earning reports.
+```
 
 11- Once the files are all uploaded to the knowledge base, you can start testing the agent to validate how it can respond to questions using this knowledge base. The uploaded files get processed and prepared to be leveraged by the agent. After the upload completes, test the agent by asking a few questions such as:
 
@@ -198,7 +200,7 @@ As explained earlier, the decription of an agent is important as it is leveraged
 
 ![wxo tool options](images/wxo-tool-options.png) 
 
-watsonx Orchestrate supports multiple approaches to adding tools to agents as explained in the [Adding tools to an agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-tools) documentation:
+watsonx Orchestrate supports multiple approaches to adding tools to agents as explained in the [Add a tool](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=agents-managing-tools-from-agent#agent-add-tool) documentation:
 
    - Add from catalog: The **Add from catalog** option enables you to add a tool from a rich catalog of pre-defined tools. The catalog of tools is actively being developed to make it even easier to add tools to agents.
 
@@ -206,10 +208,10 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents as ex
 
    - Import: The **Import** option enables you to import an external tool using an OpenAPI specification and selecting which operations you want to import as tools.
 
-   - Create a new flow: The **Create a new flow** option provides you with a drag and drop tool builder interface to create a sequence of steps that utilize conditional controls and activities. 
+   - Create a new flow: The **Create a new flow** option provides you with a drag and drop tool builder interface to create a sequence of steps that utilize conditional controls and activities.
 
 Additionally, you can use the watsonx Orchestrate [Agentic Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/) to develop and upload Python and OpenAPI tools to a specific watsonx Orchestrate instance which you can then add to the agents.
-watsonx Orchestrate also supports the addition of [Model Context Protocol (MCP)](https://developer.watson-orchestrate.ibm.com/) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
+watsonx Orchestrate also supports the addition of Model Context Protocol (MCP) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
 
 For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a **financial_api_openapi.json** file which will be provided by your instructor. 
 
