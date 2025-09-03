@@ -59,10 +59,12 @@ Try to type a few generic questions and observe the responses from the large lan
 ## Financial Analyst Agent Creation
 In this section, you will go through the process of creating an AI agent in watsonx Orchestrate:
 
-6- To start building agents, you can click the **Create new agent** link as referenced in step 5 or alternatively, click the top left navigation menu, expand the **Build** section (annotated with red arrow) and select **Agent Builder** (annotated with red rectangle). This will redirect you to the Manage agents page.
+6- To start building agents, you can click the top left navigation menu, expand the **Build** section (annotated with red arrow) and select **Agent Builder** (annotated with red rectangle). This will redirect you to the Manage agents page.
 ![wxo agent builder](images/wxo-nav-menu-agent-builder.png) 
 
-7- The Manage agents page will initially be blank since no agents have been created yet. As you create more and more AI agents that can reason and act, the Manage agents page will be populated with those agents. Note the analytics captured at the top of the page including **Total messages**, **Failed messages**, and **Latency average** (annonated with red rectangle). Also, note the **Discover** button (annonated with red oval) which you can click to explore and discover the [catalog of pre-built agents and tools in watsonx Orchestrate](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=discovering-catalog). Click **Create agent** button (annotated with red arrow) to start building your first agent.
+7- The Manage agents page will initially be blank since no agents have been created yet. As you create more and more AI agents that can reason and act, the Manage agents page will be populated with those agents. Note the analytics captured at the top of the page including **Total messages**, **Failed messages**, and **Latency average** (annonated with red rectangle). Also, note the **Discover** button (annonated with red oval) allows you to explore and discover the [catalog of pre-built agents and tools in watsonx Orchestrate](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=discovering-catalog). 
+
+Click **Create agent** button (annotated with red arrow) to start building your first agent.
 ![wxo create agent](images/wxo-create-agent-manage-agents-empty.png) 
 
 8- On the Create an agent page, select **Create from scratch** tile (annotated with red rectangle), provide a **Name** and a **Description** for the agent and click **Create** (annotated with red arrow).
@@ -102,7 +104,7 @@ After the AI Agent is created, in this section, you will go through the process 
    
    - Behavior: The **Behavior** section of the agent configuration is where you provide instructions to the agent to define how it responds to user requests and situations. You can configure rules that dictate when and how the agent should take action. These rules help the agent behave in a predictable and consistent manner, delivering a seamless user experience.
 
-   *Note: For more details, please consult the [Adding instructions to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-instructions) documentation.
+   *Note: For more details, please consult the [Adding instructions to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-instructions) documentation.*
 
    - Channels: The **Channels** section is how you expose your agent to different communication platforms (for example, Slack). This integration improves user experience and agent accessibility. At ths time of this lab writing, channel support is in *Preview* with support for *WebChat*, *Microsoft Teams*, and *WhatsApp with Twilio*. The product will be adding support for additional channels where you can deploy your agent(s).
 
@@ -112,20 +114,24 @@ Lastly, after you've completed your agent configuration and tested its performan
 
 ![wxo create agent config](images/wxo-create-agent-config.png) 
 
-10- On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Also, keep the *Agent style* selection as **Default**. Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut (annotated with red oval). 
+10- On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Also, keep the *Agent style* selection as **Default**. Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut. 
 
-In the Knowledge section, you have to choose how to provide knowledge information to the agent. watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI, connecting to a content repository like Milvus or Elasticsearch, or connecting to an existing Custom service instance. The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Choose knowledge** button (annotated with red arrow) to upload pdf files capturing earnings reports for AMZN, META, NVDA, and NFLX.
+In the Knowledge section, you have to choose how to provide knowledge information to the agent. watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI, connecting to a content repository like Milvus or Elasticsearch, or connecting to an existing Custom service instance. The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. 
+
+For this lab, click the **Choose knowledge** button (annotated with red arrow) to upload pdf files capturing earnings reports for AMZN, META, NVDA, and NFLX.
 
 ![wxo choose knowledge](images/wxo-choose-knowledge.png) 
 
+Follow through with the steps to upload files by either opening the following files in a new tab and downloading them.
 
-Follow through with the steps to Drag and drop the following pdf files to upload to the knowledge for the agent :
    - [AMZN-Q4-2024-Earnings.pdf](documents/AMZN-Q4-2024-Earnings.pdf)
    - [META-Q4-2024-Earnings.pdf](documents/META-Q4-2024-Earnings.pdf)
    - [NFLX-Q4-2024-Earnings.pdf](documents/NFLX-Q4-2024-Earnings.pdf)
    - [NVDA-Q4-2024-Earnings.pdf](documents/NVDA-Q4-2024-Earnings.pdf)
 
 ![wxo upload files](images/wxo-upload-files.png) 
+
+Once all the files have been uploaded, click "Next" on the bottom right of the panel. 
 
 Here, you will also be able to add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a number of recent earnings reports for a handful of companies.
 
@@ -134,13 +140,15 @@ Description:
 This knowledge addresses all details about earning reports for the companies of interest. Research analysts can ask about any details from earning reports.
 ```
 
-11- Once the files are all uploaded to the knowledge base, you can start testing the agent to validate how it can respond to questions using this knowledge base. The uploaded files get processed and prepared to be leveraged by the agent. After the upload completes, test the agent by asking a few questions such as:
+Click the "Save" button to complete this step. You will be brought back to the page which allows you to continue to manage your agent as well as preview it. 
+
+11- Now, you can start testing the agent to validate how it can respond to questions using this knowledge base. The uploaded files get processed and prepared to be leveraged by the agent. After the upload completes, test the agent by asking a few questions such as:
 
 ```
 Can you tell me about Meta's business
 ```
 
-You should see the responses being retrieved from the uploaded documents and then the final response generated by the agent as illustrated in the figure below. Click *Show Reasoning* (annotated with red oval) and also *Step 1* to review the agent's reasoning and validate it is correctly retrieving the answer from the knowledge base. Additionally, click the *Toggle Citation* icon (annotated with red arrow) to show the actual document from which the response is retrieved. Note it is correctly getting the response the Meta's earnings report (annotated with red rectangle).
+You should see the responses being retrieved from the uploaded documents and then the final response generated by the agent as illustrated in the figure below. Click **Show Reasoning** (annotated with red oval) and **Step 1** to review the agent's reasoning and validate it is correctly retrieving the answer from the knowledge base. Additionally, click the **Toggle Citation** icon (annotated with red arrow) to show the actual document from which the response is retrieved. Note it is correctly getting the response from the Meta's earnings report (annotated with red rectangle).
 
 ![wxo knowledge test meta](images/wxo-knowledge-test-meta.png) 
 
@@ -149,13 +157,13 @@ Try another test as follows:
 ```
 I'm interested in learning more about Meta and Amazon. Can you tell me a bit about their businesses?
 ```
-Observe the response being generated using the knowledge base. As before, click the *Toggle Citation* icon (annotated with red arrow) to show the refernced documents. Click *Next* icon under the referenced document to review all retrieved documents.
+Observe the response being generated using the knowledge base. As before, click the **Toggle Citation** icon (annotated with red arrow) to show the referenced documents. Click the icon for **Next** under the referenced document to review all retrieved documents.
 
-![wxo agent knowledge test amazon](images/wxo-agent-knowledge-test-amazon.png) 
+![wxo agent knowledge test amazon](images/wxo-knowledge-test-amazon.png) 
 
-Feel free to try a test like ```Give Toyota q4 financial results``` and review the response from the agent which should indicate that it has no information about Toyota as shown in the figure below.
+Feel free to try a test like ```Give Toyota q4 financial results``` and review the response from the agent which should indicate that it has no information about Toyota as shown in the figure below. This is expected as we did not provide any financial information about Toyota in our knowledge base. 
 
-![wxo touota test](images/wxo-toyota-test.png) 
+![wxo toyota test](images/wxo-toyota-test.png) 
 
 At this time, it is worthwhile taking a moment to reflect on what you've developed so far. You have designed an agent and empowered it with a knowledge base to enable it to respond to queries in context using its knowledge base. *Congratulations!!*
 
@@ -208,7 +216,7 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents as ex
 Additionally, you can use the watsonx Orchestrate [Agentic Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/) to develop and upload Python and OpenAPI tools to a specific watsonx Orchestrate instance which you can then add to the agents.
 watsonx Orchestrate also supports the addition of Model Context Protocol (MCP) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
 
-For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a **financial_api_openapi.json** file which will be provided by your instructor. 
+For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a **financial_api_openapi.json** file which you can find in the tools folder in this repo. 
 
 On the *Add a new tool* pop-up, select **Import from file** tile (annonated with red rectangle).
 
@@ -218,7 +226,7 @@ On the *Add a new tool* pop-up, select **Import from file** tile (annonated with
 
 ![wxo tool import openapi](images/wxo-tool-import-openapi.png) 
 
-18- Next, select the checkboxes for the **Get Stock Price Data**, **Get Stock Information**, **Get Financial Statements**, **Get Earnings Report**, and **Search Wikipedia** operations (annotated with red arrows) and click **Done**.
+18- Next, select the checkboxes for the **Get Stock Price Data**, **Get Stock Information**, **Get Financial Statements**, **Get Earnings Report**, and **Search Wikipedia** operations (annotated with red arrows) and click **Done**. This might take a few minutes to populate. 
 
 ![wxo tool import operations](images/wxo-tool-import-operations.png) 
 
@@ -291,7 +299,7 @@ You are a Financial Analyst Agent that provides comprehensive financial research
 - "Explain EBITDA and show Microsoft's EBITDA trend" → SEARCH WIKIPEDIA + GET FINANCIAL STATEMENTS
 ```
 
-Also, switch the slide bar to the off position (annotated with red arrow) to disable making the **Financial API Agent** accessible on the chat interface. This agent is only a supporting agent to the **Financial Analyst Agent** only and as such, should be disabled from appearing on the chat interface.
+Also, switch the slide bar to the **off position** (annotated with red arrow) to disable making the **Financial API Agent** accessible on the chat interface. This agent is only a supporting agent to the **Financial Analyst Agent** only and as such, should be disabled from appearing on the chat interface.
 
 ![wxo behavior description](images/wxo-behavior-description.png)
 
@@ -379,7 +387,7 @@ Instructions:
 For information about latest or recent news, use the search tool. Also, for general inquiries where the information is available on-line can be retrieved using a web search, use the search tool.
 ```
 
-Next, test the functionality of the agent by asking a question such as ```Can you show top executives at IBM?``` and observe the response of the agent. Click the **Show Reasoning** link (annotated with red arrow) and note how the agent is correctly invoking the **DuckDuckGo Search Tool** to retrieve relevant information.
+Next, test the functionality of the agent by asking a question such as ```Can you show top executives at IBM?``` and observe the response of the agent. Click the **Show Reasoning** link (annotated with red arrow) and note how the agent is correctly invoking the **Tavily Search Tool** to retrieve relevant information.
 
 ![wxo tavily search](images/wxo-tavily-search.png) 
 
@@ -416,7 +424,8 @@ Now that you have developed all agents and tools, in this section, you will work
 
 ![wxo collaborator agent options](images/wxo-collaborator-agents-options.png) 
 
-39- Select the checkbox next to both, the **Web Search Agent** and the **Financial API Agent** (annotated with red arrows) and click **Add to agent** button (annotated with red oval).
+39- Select the checkbox next to both, the **Web Search Agent** and the **Financial API Agent** (annotated with red arrows) and click **Add to agent** button (annotated with red oval). 
+*Note: It may take a few minutes for the agents to appear on this page.*
 
 ![wxo financial analyst add collaborators](images/wxo-financial-analyst-add-collaborators.png) 
 
@@ -533,5 +542,5 @@ Feel free to explore and experience the power of Agents in action! 🚀
 
 To recap, you have used watsonx Orchestrate no-code functionality to develop a **Financial Analyst Agent** skilled at helping financial research analysts accelerate their research and due diligence in identifying new investment opportunities. You added knowledge to the agent by uploading knowledge documents in the form of pdf files capturing earning reports.
 
-Next, you augrmented the **Financial Analyst Agent** capabilities by developing two other agents, the **Web Search Agent** and the **Financial API Agent** which are empowered with tools to execute web search queries and also retrieve information from finance APIs and glossary definition tools.
+Next, you augmented the **Financial Analyst Agent** capabilities by developing two other agents, the **Web Search Agent** and the **Financial API Agent** which are empowered with tools to execute web search queries and also retrieve information from finance APIs and glossary definition tools.
 These tools and agents help increase the power of the **Financial Analyst Agent** in providing timely research results to the analysts.
