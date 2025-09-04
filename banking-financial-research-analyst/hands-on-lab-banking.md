@@ -357,7 +357,7 @@ On the *Add a new tool* pop-up, select **Import from file** tile (annonated with
 
 ![wxo tool import from file openapi web search](images/wxo-tool-import-from-file-openapi-web-search.png) 
 
-29- On the Import tool page, upload the [**websearch_openapi.json**](tools/websearch_openapi.json) file located in the tools folder (annotated with red rectangle) and click **Next** (annotated with red arrow).
+29- On the Import tool page, upload the [**websearch_openapi.json**](tools/websearch_openapi.json) file (annotated with red rectangle) located in the tools folder and click **Next** (annotated with red arrow).
 
 ![wxo web search agent tool import openapi](images/wxo-web-search-agent-tool-import-openapi.png) 
 
