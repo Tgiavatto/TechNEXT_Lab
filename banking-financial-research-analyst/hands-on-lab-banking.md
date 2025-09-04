@@ -204,7 +204,7 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents as ex
 Additionally, you can use the watsonx Orchestrate [Agentic Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/) to develop and upload Python and OpenAPI tools to a specific watsonx Orchestrate instance which you can then add to the agents.
 watsonx Orchestrate also supports the addition of Model Context Protocol (MCP) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
 
-For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a **financial_api_openapi.json** file which you can find in the tools folder in this repo. 
+For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need the **financial_api_openapi.json** file which you can find in the tools folder in this repo. 
 
 On the *Add a new tool* pop-up, select **Import from file** tile (annonated with red rectangle).
 
@@ -357,7 +357,7 @@ On the *Add a new tool* pop-up, select **Import from file** tile (annonated with
 
 ![wxo tool import from file openapi web search](images/wxo-tool-import-from-file-openapi-web-search.png) 
 
-29- On the Import tool page, drag and drop the **websearch_openapi.json** file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
+29- On the Import tool page, upload the [**websearch_openapi.json**](tools/websearch_openapi.json) file located in the tools folder (annotated with red rectangle) and click **Next** (annotated with red arrow).
 
 ![wxo web search agent tool import openapi](images/wxo-web-search-agent-tool-import-openapi.png) 
 
