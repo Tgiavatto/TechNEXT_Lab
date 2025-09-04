@@ -54,8 +54,4 @@ You can find step-by-step instructions here :
 
 [Step-by-step hands-on guide](hands-on-lab-banking.md)
 
-## Demo Video
-A video demo of the solution is below:
-
-[financial_research_analyst_demo.mp4](financial_research_analyst_demo.mp4)
 
