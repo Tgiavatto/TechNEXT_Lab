@@ -210,7 +210,7 @@ On the *Add a new tool* pop-up, select **Import from file** tile (annonated with
 
 ![wxo tool import from file openapi](images/wxo-tool-import-from-file-openapi.png) 
 
-17- On the Import tool page, upload the [**financial_api_openapi.json**](tools/financial_api.json) file using the Import from file option (annotated with red rectangle) and click **Next** (annotated with red arrow).
+17- On the Import tool page, upload the [**financial_api_openapi.json**](tools/financial_api_openapi.json) file using the Import from file option (annotated with red rectangle) and click **Next** (annotated with red arrow).
 
 ![wxo tool import openapi](images/wxo-tool-import-openapi.png) 
 
