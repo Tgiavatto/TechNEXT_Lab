@@ -218,9 +218,9 @@ On the *Add a new tool* pop-up, select **Import from file** tile (annonated with
 
 ![wxo tool import openapi](images/wxo-tool-import-openapi.png) 
 
-18- Next, select the checkboxes for the **Get Stock Price Data**, **Get Stock Information**, **Get Financial Statements**, **Get Earnings Report**, and **Search Wikipedia** operations (annotated with red arrows) and click **Done**. This might take a few minutes to populate. 
+18- Next, select the checkboxes for the **Get Stock Price Data**, **Get Stock Information**, **Get Financial Statements**, and **Search Wikipedia** operations (annotated with red arrows) and click **Done**. This might take a few minutes to populate. 
 
-![wxo tool import operations](images/wxo-tool-import-operations.png) 
+![wxo tool import operations](images/updated_tools.png) 
 
 19- At this point, you will see the tools imported under the Tools subsection which means they are available for the **Financial API Agent** to use these tools in executing tasks that require retrieving market data or getting glossary information. 
 
