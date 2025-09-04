@@ -33,14 +33,18 @@ By automating these tasks, the company aims to accelerate research process to id
 ## Pre-requisites 
 To run the steps in this hands-on lab portion of the bootcamp, you need access to **watsonx Orchestrate** which is provided for you as part of the preparation for this bootcamp.
 
+If you have registered for an IBMid and completed the steps to join the IBM Cloud account prior to the bootcamp, please begin the lab with the following steps. 
+
+If not, please register for an IBMid by following the instructions here. Once that is complete, please reach out to an instructor.  
+
 ## watsonx Orchestrate
 As detailed in the [Solution Architecture](images/banking-fra-architecture.png), we will build and deploy the majority of the agents for the solution in watsonx Orchestrate. AI Agents are autonomous entities that can run tasks, decide and interact with their environment. In IBM watsonx Orchestrate, agents are a key component enabling the creation of complex, dynamic systems that can adapt and respond to changing conditions. 
 
 ### Accessing watsonx Orchestrate
 To access watsonx Orchestrate, follow these steps:
 
-1- If not already logged into your IBM Cloud account, navigate your preferred browser to https://cloud.ibm.com and log in with your credentials. 
-*Note: These are the same credentials you created upon signing up for an account on IBM Cloud.*
+1- If not already logged into your IBM Cloud account, navigate your preferred browser to https://cloud.ibm.com and log in with your IBMid credentials. 
+*Note: These are the same credentials you created upon signing up for an IBMid.*
 
 2- On your IBM Cloud landing page, click the top left navigation menu (hamburger menu) and select **Resource list** (annotated with red rectangle).
 *Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available.*
