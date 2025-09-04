@@ -204,13 +204,13 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents as ex
 Additionally, you can use the watsonx Orchestrate [Agentic Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/) to develop and upload Python and OpenAPI tools to a specific watsonx Orchestrate instance which you can then add to the agents.
 watsonx Orchestrate also supports the addition of Model Context Protocol (MCP) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
 
-For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need the **financial_api_openapi.json** file which you can find in the tools folder in this repo. 
+For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need the **financial_api_openapi.json** file which you can find in the [tools](tools/) folder in this repo. 
 
 On the *Add a new tool* pop-up, select **Import from file** tile (annonated with red rectangle).
 
 ![wxo tool import from file openapi](images/wxo-tool-import-from-file-openapi.png) 
 
-17- On the Import tool page, upload the [**financial_api_openapi.json**](tools/financial_api_openapi.json) file using the Import from file option (annotated with red rectangle) and click **Next** (annotated with red arrow).
+17- On the Import tool page, upload the [**financial_api_openapi.json**](tools/financial_api_openapi.json) file (annotated with red rectangle) using the Import from file option and click **Next** (annotated with red arrow).
 
 ![wxo tool import openapi](images/wxo-tool-import-openapi.png) 
 
