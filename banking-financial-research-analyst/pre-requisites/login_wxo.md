@@ -16,8 +16,8 @@ To access watsonx Orchestrate, follow these steps:
 *Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available.*
 ![IBM Cloud Resource List](images/ibm_cloud_resources.png) 
 
-3- On the Resource List page, expand the **AI / Machine Learning** section (annotated with red arrow), and click the **Watsonx Orchestrate** service (annotated with red rectangle) service name.
+2. On the Resource List page, expand the **AI / Machine Learning** section (annotated with red arrow), and click the **Watsonx Orchestrate** service (annotated with red rectangle) service name.
 ![IBM Cloud wxo](images/ibm_cloud_wxo.png) 
 
-4- Click **Launch watsonx Orchestrate** (annotated with red arrow) to launch the service.
+3. Click **Launch watsonx Orchestrate** (annotated with red arrow) to launch the service.
 ![wxo launch](images/wxo-launch.png) 
