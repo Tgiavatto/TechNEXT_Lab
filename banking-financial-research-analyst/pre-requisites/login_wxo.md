@@ -14,10 +14,7 @@ To access watsonx Orchestrate, follow these steps:
 
 1. On your IBM Cloud landing page, click the top left navigation menu (hamburger menu) and select **Resource list** (annotated with red rectangle).
 *Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available.*
-![IBM Cloud Resource List](banking-financial-research-analyst/images/ibm_cloud_resources.png) 
 
 2. On the Resource List page, expand the **AI / Machine Learning** section (annotated with red arrow), and click the **Watsonx Orchestrate** service (annotated with red rectangle) service name.
-![IBM Cloud wxo](banking-financial-research-analyst/images/ibm_cloud_wxo.png) 
 
 3. Click **Launch watsonx Orchestrate** (annotated with red arrow) to launch the service.
-![wxo launch](banking-financial-research-analyst/images/wxo-launch.png) 
