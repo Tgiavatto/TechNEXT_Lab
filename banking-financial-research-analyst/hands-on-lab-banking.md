@@ -104,6 +104,8 @@ After the AI Agent is created, in this section, you will go through the process 
 
 After you've completed your agent configuration and tested its performance, you can **Deploy** the agent (annotated with red arrow) to make it available through the selected channel. 
 
+**Note: For the purposes of this lab, we are not deploying the agent yet. Please proceed to the next step.**
+
 ![wxo create agent config](images/wxo-create-agent-config.png) 
 
 10- On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Also, keep the *Agent style* selection as **Default**. Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut. 
@@ -114,7 +116,11 @@ For this lab, click the **Choose knowledge** button (annotated with red arrow) t
 
 ![wxo choose knowledge](images/wxo-choose-knowledge.png) 
 
-Follow through with the steps to upload files by either opening the following files in a new tab and downloading them.
+In the `Choose knowledge source` window, select the `Upload files` option and then click the `Next` button.
+
+![wxo upload files](images/wxo-select-upload-files.png) 
+
+Download the following files (open the link in a new browser tab and download them to your local machine). Then upload them in the `Add knowledge` panel by either dragging and dropping them in the panel or selecting them in the file browser. 
 
    - [AMZN-Q4-2024-Earnings.pdf](documents/AMZN-Q4-2024-Earnings.pdf)
    - [META-Q4-2024-Earnings.pdf](documents/META-Q4-2024-Earnings.pdf)
@@ -133,6 +139,10 @@ This knowledge addresses all details about earning reports for the companies of 
 ```
 
 Click the "Save" button to complete this step. You will be brought back to the page which allows you to continue to manage your agent as well as preview it. 
+
+> [!TIP] 
+> Before proceeding to the next step, ensure the files have completed processing. It can take a couple of minutes to complete.
+> ![wxo upload files](images/wxo-upload-files-complete.png) .
 
 11- Now, you can start testing the agent to validate how it can respond to questions using this knowledge base. The uploaded files get processed and prepared to be leveraged by the agent. After the upload completes, test the agent by asking a few questions such as:
 
@@ -157,18 +167,22 @@ Feel free to try a test like ```Give Toyota q4 financial results``` and review t
 
 ![wxo toyota test](images/wxo-toyota-test.png) 
 
+>[!TIP]
+>*The `Thumbs up` and `Thumbs down` icons below each response allow the user to provide feedback to improve the performance and accuracy of the agents in watsonx Orchestrate*
+
 At this time, it is worthwhile taking a moment to reflect on what you've developed so far. You have designed an agent and empowered it with a knowledge base to enable it to respond to queries in context using its knowledge base. *Congratulations!!*
 
 Reviewing the architecture, you've completed the part of the agentic solution which involved creating the Financial Analyst agent and empowering it with a knowledge base (annotated with red rectangles in the figure below). In the next section, you will work through the process of creating the **Financial API Agent** and the **Web Search Agent** which you will then add as collaborator agents to the **Financial Analyst Agent**.
 
 ![wxo agent knowledge complete](images/wxo-financial-research-agent-knowledge-complete.png) 
 
+
 ## Financial API Agent Creation and Configuration
 In this section, you will develop the Financial API Agent, one of the collaborator agents which is specifically skilled at returning market data and glossary definitions. In this hands-on lab, the Financial API Agent is empowered with two tools, the **Market Data Tool** which returns stock prices and the **Glossary Tool** which leverages Wikipedia to return glossary definitions. In practice, this agent can also get access to other internal tools such as those for modeling stock behavior or forecasting stock prices; the approach to empower the agent with such tools would be the same.
 
-12- If you are not at the watsonx Orchestrate landing page (chat interface), repeat the steps above to make sure you are logged into IBM Cloud, find the watsonx Orchestrate service and launch it to access the landing page.
+12- On the top left, click on the hamburger menu and select the `Chat` to go back to the watsonx Orchestrate landing page.
 
-13- From the watsonx Orchestrate langding page, click **Create agent** (annotated with red rectangle) to start developing a new agent, the Financial API Agent.
+13- From the watsonx Orchestrate landing page, click **Create agent** (annotated with red rectangle) to start developing a new agent, the Financial API Agent.
 
 ![wxo create agent chatUI](images/wxo-create-agent.png) 
 
@@ -214,7 +228,11 @@ On the *Add a new tool* pop-up, select **Import from file** tile (annonated with
 
 ![wxo tool import from file openapi](images/wxo-tool-import-from-file-openapi.png) 
 
-17- On the Import tool page, upload the [**financial_api_openapi.json**](tools/financial_api_openapi.json) file (annotated with red rectangle) using the Import from file option and click **Next** (annotated with red arrow).
+17- Download the API specification by opening the [**financial_api_openapi.json**](tools/financial_api_openapi.json) file in a new browser tab. Then click the `Download raw file` button (highlighted in the screenshot).
+
+![download openapi](images/gh-download-raw-file.png) 
+
+On the Import tool page, upload the financial_api_openapi.json file you downloaded using the Import from file option and click **Next** (annotated with red arrow).
 
 ![wxo tool import openapi](images/wxo-tool-import-openapi.png) 
 
@@ -322,14 +340,14 @@ On the *Deploy Agent* page, you have the opportunity to provide connection detai
 
 ![wxo financial agent deploy conn](images/wxo-financial-api-agent-deploy-conn.png)
 
-*Congratulations!!* You have just completed developing the **Financial API Agent** empowered with tools for returning earnings data and glossardy definitions.
+*Congratulations!!* You have just completed developing the **Financial API Agent** empowered with tools for returning earnings data and glossary definitions.
 
 ## Web Search Agent Creation and Configuration
 In this section, you will develop the **Web Search Agent**, another collaborator agent which is specifically skilled at searching the web and returning publicly available information about an entity as well as any recent news and analyst reports. There are many available tools that provide web search functionality. In this hands-on lab, you will add the **Tavily Search Tool** and complete the hands-on lab using just that search tool. In practice, you can choose your preferred web search tool or even combine multiple search tools if you would like; just make sure to review the agent instructions and update accordingly.
 
 *Optional* If you leverage multiple search tools, you need to update the instructions for the agent to retrieve search results from multiple tools and aggregate the results.
 
-24- If you are not at the watsonx Orchestrate landing page (chat interface), repeat the earlier steps to make sure you are logged into IBM Cloud, find the watsonx Orchestrate service and launch it to access the landing page.
+24- If you are not at the watsonx Orchestrate landing page (chat interface), repeat the earlier steps to return to the watsonx Orchestrate landing page.
 
 25- On the watsonx Orchestrate landing page, which is the Chat UI, click **Create new agent** link (annotated with red rectangle) to start creating the Web Search Agent.
 
@@ -362,6 +380,8 @@ On the *Add a new tool* pop-up, select **Import from file** tile (annonated with
 ![wxo tool import from file openapi web search](images/wxo-tool-import-from-file-openapi-web-search.png) 
 
 29- On the Import tool page, upload the [**websearch_openapi.json**](tools/websearch_openapi.json) file (annotated with red rectangle) located in the tools folder and click **Next** (annotated with red arrow).
+
+>**Note: You must first download the API file locally by opening the file in new browser window and selecting the `Download raw file` option as you did in step 17.**
 
 ![wxo web search agent tool import openapi](images/wxo-web-search-agent-tool-import-openapi.png) 
 
@@ -398,7 +418,7 @@ On the *Deploy Agent* page, you have the opportunity to provide connection detai
 ## Pulling it together - Complete Agent Collaboration <a id="pulling-it-together"></a>
 Now that you have developed all agents and tools, in this section, you will work through the process of integrating the collaborator agents, testing and deploying the **Financial Analyst Agent**.
 
-34- If you are not at the watsonx Orchestrate landing page (chat interface), repeat the earlier steps to make sure you are logged into IBM Cloud, find the watsonx Orchestrate service and launch it to access the landing page.
+34- If you are not at the watsonx Orchestrate landing page (chat interface), repeat the earlier steps to return to the watsonx Orchestrate landing page..
 
 35- On the watsonx Orchestrate landing page, which is the Chat UI, click **Manage agents** (annotated with red arrow).
 
@@ -452,7 +472,7 @@ Expand the **Show Reasoning** and **Step 1** links to review the reasoning of th
 
 ![wxo knowledge base test](images/wxo-knowledge-base-test.png) 
 
-41- Continue testing your agent now by stressing the web search agent functionality. To do so, ask the following question.
+41- Feel free to try a couple more questions to test the web search agent functionality. For example, ask the following question.
 
 Question: 
 ```
