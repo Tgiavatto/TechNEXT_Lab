@@ -33,7 +33,8 @@ By automating these tasks, the company aims to accelerate research process to id
 ## Pre-requisites 
 To run the steps in this hands-on lab portion of the bootcamp, you need access to **watsonx Orchestrate** which is provided for you as part of the preparation for this bootcamp.
 
-*Note: If you have a prudential.com email, skip these steps and proceed to the next section.*
+>*Note: If you have a prudential.com email, skip these steps and proceed to the next section.*
+
 
 If you have registered for an IBMid and completed the steps to join the IBM Cloud account prior to the bootcamp, please begin the lab with the following steps. 
 
