@@ -43,7 +43,7 @@ If not, please register for an IBMid by following the instructions [here](https:
 ## watsonx Orchestrate
 As detailed in the [Solution Architecture](images/banking-fra-architecture.png), we will build and deploy the majority of the agents for the solution in watsonx Orchestrate. AI Agents are autonomous entities that can run tasks, decide and interact with their environment. In IBM watsonx Orchestrate, agents are a key component enabling the creation of complex, dynamic systems that can adapt and respond to changing conditions. 
 
-*Note: If you have not yet followed the steps to join an associated IBM account from your email, please follow the following instructions [here](https://github.com/Tgiavatto/TechNEXT_Lab/blob/main/banking-financial-research-analyst/pre-requisites/login_wxo.md).* 
+>*Note: If you have not yet followed the steps to join an associated IBM account from your email, please follow the following instructions [here](https://github.com/Tgiavatto/TechNEXT_Lab/blob/main/banking-financial-research-analyst/pre-requisites/login_wxo.md).* 
 
 ### Accessing watsonx Orchestrate
 To access watsonx Orchestrate, follow these steps:
