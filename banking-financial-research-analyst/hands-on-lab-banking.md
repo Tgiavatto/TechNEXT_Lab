@@ -34,6 +34,7 @@ By automating these tasks, the company aims to accelerate research process to id
 To run the steps in this hands-on lab portion of the bootcamp, you need access to **watsonx Orchestrate** which is provided for you as part of the preparation for this bootcamp.
 
 *Note: If you have a prudential.com email, skip these steps and proceed to the next section.*
+
 If you have registered for an IBMid and completed the steps to join the IBM Cloud account prior to the bootcamp, please begin the lab with the following steps. 
 
 If not, please register for an IBMid by following the instructions [here](https://github.com/Tgiavatto/TechNEXT_Lab/blob/main/banking-financial-research-analyst/pre-requisites/IBMid_creation.md). Once that is complete, please reach out to an instructor so you can be added to an environment to access watsonx Orchestrate.  
