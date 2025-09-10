@@ -33,12 +33,15 @@ By automating these tasks, the company aims to accelerate research process to id
 ## Pre-requisites 
 To run the steps in this hands-on lab portion of the bootcamp, you need access to **watsonx Orchestrate** which is provided for you as part of the preparation for this bootcamp.
 
+*Note: If you have a prudential.com email, skip these steps and proceed to the next section.*
 If you have registered for an IBMid and completed the steps to join the IBM Cloud account prior to the bootcamp, please begin the lab with the following steps. 
 
 If not, please register for an IBMid by following the instructions [here](https://github.com/Tgiavatto/TechNEXT_Lab/blob/main/banking-financial-research-analyst/pre-requisites/IBMid_creation.md). Once that is complete, please reach out to an instructor so you can be added to an environment to access watsonx Orchestrate.  
 
 ## watsonx Orchestrate
 As detailed in the [Solution Architecture](images/banking-fra-architecture.png), we will build and deploy the majority of the agents for the solution in watsonx Orchestrate. AI Agents are autonomous entities that can run tasks, decide and interact with their environment. In IBM watsonx Orchestrate, agents are a key component enabling the creation of complex, dynamic systems that can adapt and respond to changing conditions. 
+
+*Note: If you have not yet followed the steps to join an associated IBM account from your email, please follow the following instructions [here](https://github.com/Tgiavatto/TechNEXT_Lab/blob/main/banking-financial-research-analyst/pre-requisites/login_wxo.md).* 
 
 ### Accessing watsonx Orchestrate
 To access watsonx Orchestrate, follow these steps:
